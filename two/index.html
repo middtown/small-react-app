@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <!-- REACT LIBRARY -->
+	  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	  <!-- REACT DOM LIBRARY -->
+	  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	  <!-- BABEL LIBRARY -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+	  <!-- Font Awesome -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title> File Two </title>
+</head>
+<body>
+	<div id="app">React has not rendered yet</div>
+	<script type="text/babel">
+		
+		// pass props in stateless function 
+		var Person = function(props) {
+			return(
+				<h1>Hi,  {props.name}</h1>
+			);
+	}
+		
+		ReactDOM.render ( 
+			<div>
+				<Person name="Aaron" />
+				<Person name="Rochelle" />
+				<Person name="Sherine" />
+				<Person name="Clari" />
+				<Person name="Sidette" />
+				<Person name="Nichelle" />
+			</div>, 
+			document.getElementById("app") );
+	</script>
+</body>
+</html>

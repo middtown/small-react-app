@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <!-- REACT LIBRARY -->
+	 <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	 <!-- REACT DOM LIBRARY -->
+	 <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	 <!-- BABEL LIBRARY -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+	 <!-- Font Awesome -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <!-- Main Style -->
+	 <link rel="stylesheet" href="css/main.css">
+	<title>FriendLy</title>
+</head>
+<body>
+	<div id="app">React has not rendered yet</div>
+	<script type="text/babel">
+		
+		//friendly component
+		function FriendLy (props) {
+
+		var friendlyStyle = {
+			display: "inline-block",
+			margin: 20,
+			height: 300,
+			width: 200,
+			padding: 0,
+			backgroundColor: "#fff",
+			WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+			filter: "drop-shadow(0px 0px 5px #555)",
+			boxShadow: "0 1rem 2rem #555"
+		}
+			return (
+				<div style={friendlyStyle}>
+					<Avatar img={props.img}/>
+					<UserName name={props.name}/>
+					<GetConnected/>
+				</div>
+			);
+		}
+
+		//Avatar Component
+		function Avatar (props) {
+		var avatarStyle = {
+			margin: "20px 0 0 27px",
+			width: 150,
+			height: 150,
+			borderRadius: "50%"
+		}
+			return (
+				<img src={props.img} alt="lego character profile image" style={avatarStyle}/>
+			);
+		}
+
+		//UserName Component
+		function UserName (props) {
+		var userNameStyle = {
+			fontSize: 24, 
+			fontFamily: "Arial, Helvetica, sans-serif",
+			margin: 20,
+			textAlign: "center"
+		}
+			return (
+				<h1 style={userNameStyle}>{props.name}</h1>
+			);
+		}
+
+		//GetConnected Component
+		function GetConnected (props) {
+		var getConnectedStyle = {
+			marginLeft: 15
+		}
+			return (
+				<div style={getConnectedStyle}>
+					<Like/>
+					<Share/>
+					<Add/>
+				</div>
+			);
+		}
+		
+		var iconStyle = { margin: 20 }
+
+		//Like Component
+		function Like() {
+			return (
+				<i className="fa fa-thumbs-o-up" aria-hidden="true" style={iconStyle}></i>
+			);
+		}
+
+		//Share Component 
+		function Share() {
+			return (
+				<i className="fa fa-share" aria-hidden="true" style={iconStyle}></i>
+			);
+		}
+
+ 		//Add Component
+		function Add() {
+			return (
+				<i className="fa fa-users" aria-hidden="true" style={iconStyle}></i>
+			);
+		}
+		
+		ReactDOM.render (
+			<div>
+				<FriendLy name="Milad" img="img/lego-profile-2.jpg"/>
+				<FriendLy name="James" img="img/lego-profile-1.jpg"/>
+				<FriendLy name="Micheal" img="img/lego-profile-3.jpg"/>
+				<FriendLy name="Jin" img="img/lego-profile-4.jpg"/>
+				<FriendLy name="Matt" img="img/lego-profile-5.jpg"/>
+				<FriendLy name="Bryan" img="img/lego-profile-8.jpg"/>
+				<FriendLy name="Ricky" img="img/lego-profile-7.jpg"/>
+				<FriendLy name="Laura" img="img/lego-profile-8.jpg"/>
+				<FriendLy name="Patrick" img="img/lego-profile-6.jpg"/>
+				<FriendLy name="Jason" img="img/lego-profile-2.jpg"/>
+
+			</div>,
+			document.getElementById ("app")
+		);
+	</script>
+</body>
+</html>

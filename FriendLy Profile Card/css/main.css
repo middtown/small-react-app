@@ -1,0 +1,25 @@
+//partial sass file for basic resets and in-style elements
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; /*browsers default to 16px as font size... // 1rem is 10px; 10px/16px = 62.5%. this makes initial font size 10px instead --- basically defines what 1rem is equal too*/
+}
+
+body {
+	background-color: #00685E;
+	font-family: "lato", sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.7;
+	box-sizing: border-box;
+	padding: 3rem; 
+	align-content: center;
+}
+
